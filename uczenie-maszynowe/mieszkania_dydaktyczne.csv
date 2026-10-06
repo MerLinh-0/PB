@@ -1,0 +1,31 @@
+id,dzielnica,powierzchnia_m2,liczba_pokoi,pietro,rok_budowy,odleglosc_od_centrum_km,cena_pln,balkon
+1,Centrum,38,2,3,2008,0.8,458000,tak
+2,Centrum,52,2,5,2015,1.1,615000,tak
+3,Centrum,67,3,2,1998,1.5,735000,nie
+4,Piaski,45,2,4,2006,2.0,472000,tak
+5,Piaski,61,3,1,2012,2.4,598000,tak
+6,Piaski,73,4,6,2019,2.7,752000,tak
+7,Antoniuk,36,1,2,1986,2.6,335000,nie
+8,Antoniuk,49,2,3,1992,2.9,438000,tak
+9,Antoniuk,64,3,7,2004,3.2,565000,tak
+10,Nowe Miasto,42,2,1,2009,3.0,415000,tak
+11,Nowe Miasto,58,3,4,2016,3.4,552000,tak
+12,Nowe Miasto,76,4,5,2020,3.8,734000,tak
+13,Wygoda,41,2,2,1995,4.1,368000,nie
+14,Wygoda,55,3,3,2003,4.4,478000,tak
+15,Wygoda,69,3,1,2011,4.8,583000,tak
+16,Dziesięciny,34,1,6,1984,4.5,302000,nie
+17,Dziesięciny,47,2,8,1990,4.9,389000,tak
+18,Dziesięciny,63,3,4,2001,5.2,508000,tak
+19,Centrum,81,4,4,2021,1.3,925000,tak
+20,Piaski,33,1,2,1988,2.3,318000,nie
+21,Antoniuk,72,4,5,,3.1,618000,tak
+22,Nowe Miasto,54,2,3,2014,,523000,tak
+23,Wygoda,62,3,2,2007,4.6,519000,nie
+24,Dziesięciny,78,4,9,2018,5.0,642000,tak
+25,Centrum,44,2,1,2002,0.9,506000,nie
+26,Piaski,57,3,7,2017,2.5,579000,tak
+27,Antoniuk,53,2,1,1999,3.0,462000,nie
+28,Nowe Miasto,68,3,6,2022,3.6,676000,tak
+29,Wygoda,37,2,4,,4.3,329000,tak
+30,Dziesięciny,59,3,2,2005,,472000,nie
