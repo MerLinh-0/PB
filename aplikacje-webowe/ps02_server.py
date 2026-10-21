@@ -102,5 +102,5 @@ def main():
     start_server(host, port)
 
 
-start_server("127.0.0.1", 8080)
-#main()
+#start_server("127.0.0.1", 8080)
+main()

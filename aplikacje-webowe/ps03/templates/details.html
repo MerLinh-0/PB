@@ -1,0 +1,14 @@
+{% extends "base.html" %}\
+
+{% block title %}{{ set.name }}{% endblock %}
+
+{% block content %}
+    <div class="intro-box details-box">
+        <h1>{{ set.name }}</h1>
+        <p><strong>ID:</strong> {{ set.id }}</p>
+        <p><strong>Temat:</strong> {{ set.topic }}</p>
+        <p><strong>Rekordy:</strong> {{ set.rows }}</p>
+        <p><strong>Cechy:</strong> {{ set.cols }}</p>
+        <p><strong>Opis:</strong> {{ set.description }}</p>
+    </div>   
+{% endblock %}

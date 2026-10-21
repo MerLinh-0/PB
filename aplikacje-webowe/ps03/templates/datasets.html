@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h1>Dostępne zbiory</h1>
+    
+    <div class="grid-container">
+        {% for set in sets %}
+            <a href="{{ url_for('details', id=set.id) }}" class="card">
+                <h2>{{ set.name }}</h2>
+                <p><strong>Temat:</strong> {{ set.topic }}</p>
+                <p><strong>Rekordy:</strong> {{ set.rows }}</p>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
