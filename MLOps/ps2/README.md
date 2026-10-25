@@ -74,7 +74,7 @@ Uruchomiono serwer AI oraz sprawdzono poprawność jego działania.
 
 *   **Zużycie pamięci:**
     Wynik polecenia `sudo systemctl status llamafile`, zużycie pamięci (Memory) oraz działanie ponownego uruchomiena usługi po zabiciu procesu `sudo kill -9 <PID>` pod nowym identyfikatorem PID:
-    ![status](ps2_status)
+    ![status](ps2_status_kill.png)
     
 ## 6. Test komunikacji REST API z gospodarzem (Host-only)
 
@@ -101,5 +101,6 @@ Wysłanie zapytania JSON z systemu gospodarza.
 
 ## 7. (Dodatkowo) Test w przeglądarce
 
-Model działa również w przeglądarce pod adresem 192.168.100.149:8080 z możliwością wpisania zapytania w postaci chatu.
+* Model działa również w przeglądarce pod adresem 192.168.100.149:8080 z możliwością wpisania zapytania w postaci chatu.
+
 ![browser](ps2_browser.png)
