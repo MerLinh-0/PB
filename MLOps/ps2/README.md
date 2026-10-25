@@ -101,5 +101,5 @@ Wysłanie zapytania JSON z systemu gospodarza.
 
 ## 7. (Dodatkowo) Test w przeglądarce
 
-Model działa również w przeglądarce pod adresem 192.168.100.149:800 z możliwością wpisania zapytania w postaci chatu.
+Model działa również w przeglądarce pod adresem 192.168.100.149:8080 z możliwością wpisania zapytania w postaci chatu.
 ![browser](ps2_browser.png)
