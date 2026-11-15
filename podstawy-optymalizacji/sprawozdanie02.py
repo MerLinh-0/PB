@@ -205,3 +205,4 @@ for pt_idx, x0 in enumerate(punkty_startowe):
 
 plt.tight_layout(pad=3.0)
 plt.show()
+
