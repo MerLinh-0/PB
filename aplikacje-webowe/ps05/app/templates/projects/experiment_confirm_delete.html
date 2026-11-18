@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Usuń Eksperyment{% endblock %}
+
+{% block content %}
+    <h2>Czy na pewno chcesz usunąć ten eksperyment?</h2>
+    <p>Nazwa: <strong>{{ experiment.name }}</strong></p>
+    <p>Tej operacji nie można cofnąć.</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="button-group">
+            <a href="{% url 'experiment_detail' experiment.id %}" class="btn btn-secondary">Anuluj i wróć</a>
+            <button type="submit" class="btn btn-danger">Tak, usuń eksperyment</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Lista Projektów{% endblock %}
+
+{% block content %}
+    <h2>Wszystkie Projekty</h2>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <a href="{% url 'project_detail' project.id %}">{{ project.name }}</a>
+                - {{ project.description }}
+            </li>
+        {% empty %}
+            <li>Brak projektów w bazie.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

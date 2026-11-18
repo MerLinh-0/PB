@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Szczegóły Eksperymentu{% endblock %}
+
+{% block content %}
+    <h2>Eksperyment: {{ experiment.name }}</h2>
+    
+    <ul>
+        <li><strong>Projekt:</strong> {{ experiment.project.name }}</li>
+        <li><strong>Autor:</strong> {{ experiment.created_by.username|default:"Nieznany" }}</li>
+        <li><strong>Algorytm:</strong> {{ experiment.algorithm }}</li>
+        <li><strong>Parametry:</strong> {{ experiment.parameters }}</li>
+        <li><strong>Metryka:</strong> {{ experiment.metric_name }}: {{ experiment.metric_value }}</li>
+    </ul>
+
+    <div class="button-group">
+        <a href="{% url 'project_detail' experiment.project.id %}" class="btn">Powrót do projektu</a>
+        {% if user.is_authenticated and experiment.created_by == user %}
+            <a href="{% url 'experiment_edit' experiment.id %}" class="btn" style="margin-left: 6px;">Edytuj eksperyment</a> 
+            <a href="{% url 'experiment_delete' experiment.id %}" class="btn btn-danger" style="margin-left: auto;">Usuń eksperyment</a>
+        {% endif %}
+    </div>
+{% endblock %}

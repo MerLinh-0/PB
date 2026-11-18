@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 
 class Project(models.Model):
@@ -22,6 +23,7 @@ class Experiment(models.Model):
     metric_name = models.CharField(max_length=200)
     metric_value = models.DecimalField(max_digits=12, decimal_places=4)
     run_date = models.DateField(auto_now_add=True)
+    created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         verbose_name = "Experiment"

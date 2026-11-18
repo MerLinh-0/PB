@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Nowy Eksperyment{% endblock %}
+
+{% block content %}
+    <h2>Dodaj nowy eksperyment</h2>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="button-group">
+            {% if is_edit %}
+                <a href="{% url 'experiment_detail' experiment.id %}" class="btn btn-secondary">Anuluj</a>
+            {% else %}
+                <a href="{% url 'project_list' %}" class="btn btn-secondary">Anuluj</a>
+            {% endif %}
+            
+            <button type="submit" class="btn">Zapisz eksperyment</button>
+        </div>
+    </form>
+{% endblock %}

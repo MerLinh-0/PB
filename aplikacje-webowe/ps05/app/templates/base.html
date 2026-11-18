@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Aplikacja ML{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="{% url 'project_list' %}">Strona Główna</a>
+        </div>
+        <div class="nav-right">
+            {% if user.is_authenticated %}
+                <span>Witaj, {{ user.username }}!</span>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">Wyloguj</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn">Zaloguj się</a>
+                <a href="{% url 'register' %}" class="btn">Zarejestruj się</a>
+            {% endif %}
+        </div>
+    </nav>
+    <main>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

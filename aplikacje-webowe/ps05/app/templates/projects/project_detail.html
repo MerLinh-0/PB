@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Szczegóły Projektu{% endblock %}
+
+{% block content %}
+    <h2>Projekt: {{ project.name }}</h2>
+    <p>{{ project.description }}</p>
+
+    <h3>Eksperymenty w tym projekcie:</h3>
+    <ul>
+        {% for exp in experiments %}
+            <li>
+                <a href="{% url 'experiment_detail' exp.id %}">{{ exp.name }}</a> 
+                (Algorytm: {{ exp.algorithm }})
+            </li>
+        {% empty %}
+            <li>Ten projekt nie ma jeszcze eksperymentów.</li>
+        {% endfor %}
+    </ul>
+    
+    <div>
+        <a href="{% url 'project_list' %}" class="btn btn-secondary">Powrót do listy projektów</a>
+        <a href="{% url 'experiment_create' %}" class="btn">Dodaj eksperyment</a>
+    </div>
+{% endblock %}
